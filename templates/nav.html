@@ -1,0 +1,14 @@
+<header id="site-nav">
+	<nav>
+		<ul>
+			{% for link in config.extra.nav.links %}
+				<li>
+          <a href="{{ link.url | safe | replace(from='$BASE_URL', to=get_url(path='')) | safe }}">{{ link.name }}</a>
+				</li>
+			{% endfor %}
+			<li>
+        <a href="{{ get_url(path='') }}">About</a>
+			</li>
+		</ul>
+	</nav>
+</header>

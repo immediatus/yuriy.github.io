@@ -1,0 +1,37 @@
+# The URL the site will be built for
+base_url = "https://immediatus.github.io"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# The title of the site
+title = "Midset Footprint"
+
+# The default author for pages
+author = "Yuriy Polyulya"
+
+taxonomies = [
+  { name = "tags" },
+]
+
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+smart_punctuation = true
+
+[extra]
+
+date_format = "%d %B %Y"
+
+google_analytics = "G-X0M5X84BLR"
+
+[extra.nav]
+links = [
+  {url = "$BASE_URL/posts", name = "Posts"},
+]
