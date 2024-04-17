@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://immediatus.github.io"
+base_url = "https://e-mindset.space"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -29,9 +29,10 @@ smart_punctuation = true
 
 date_format = "%d %B %Y"
 
-google_analytics = "G-X0M5X84BLR"
+#google_analytics = "G-X0M5X84BLR"
 
 [extra.nav]
 links = [
-  {url = "$BASE_URL/posts", name = "Posts"},
+  { url = "$BASE_URL/", name = "Blog" },
+  { url = "$BASE_URL/about", name = "About" },
 ]

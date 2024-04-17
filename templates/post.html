@@ -4,70 +4,82 @@
 <h1>{{ page.title }}</h1>
 
 {%- if page.date %}
-	<small>
-		<time datetime="{{ page.date | date(format=' %+') }}" pubdate>
-			{{- page.date | date(format=config.extra.date_format) -}}
-		</time>
-		{%- if page.authors %}
-			<span>•</span>
-			<span>Author: {{ page.authors[0] }}</span>
-		{%- endif %}
-		{%- if page.taxonomies %}
-			{%- for name, taxon in page.taxonomies %}
-				<span>•</span>
-				<ul class="tags">
-					{%-for item in taxon %}
-						<li>
-							<a class="tag" href="{{ get_taxonomy_url(kind=name, name=item) }}">#{{ item }}</a>
-						</li>
-					{%- endfor %}
-				</ul>
-			{%- endfor %}
-		{%- endif %}
-	</small>
+  <small>
+    <time datetime="{{ page.date | date(format=' %+') }}" pubdate>
+      {{- page.date | date(format=config.extra.date_format) -}}
+    </time>
+    {%- if page.authors %}
+      <span>•</span>
+      <span>Author: {{ page.authors[0] }}</span>
+    {%- endif %}
+    {%- if page.taxonomies %}
+      {%- for name, taxon in page.taxonomies %}
+        <span>•</span>
+        <ul class="tags">
+          {%-for item in taxon %}
+            <li>
+              <a class="tag" href="{{ get_taxonomy_url(kind=name, name=item) }}">#{{ item }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      {%- endfor %}
+    {%- endif %}
+  </small>
 {%- endif %}
 
+<hr/>
+
+{% if page.extra.disclaimer %}
+  <div class="statement-container disclaimer">
+    <strong class="big">⚠ Disclaimer:</strong>
+    {{ page.extra.disclaimer | markdown | safe }}
+  </div>
+{% endif %}
+
+
 {% if page.extra.toc %}
-	<h2>Table of Contents</h2>
-	<ul>
-		{% for h1 in page.toc %}
-			<li>
-				<a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-				{% if h1.children %}
-					<ul>
-						{% for h2 in h1.children %}
-							<li>
-								<a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-							</li>
-						{% endfor %}
-					</ul>
-				{% endif %}
-			</li>
-		{% endfor %}
-	</ul>
+  <div class="toc-list">
+    <h2>Table of Contents</h2>
+    <ul>
+      {% for h1 in page.toc %}
+        <li>
+          <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+          {% if h1.children %}
+            <ul>
+              {% for h2 in h1.children %}
+                <li>
+                  <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  <div>
 {% endif %}
 
 {{ page.content | safe }}
 
 {% if page.lower or page.higher %}
-	<hr>
-	<nav id="post-nav">
-		{% if page.higher %}
-			<a class="post-nav-item post-nav-prev" href="{{ page.higher.permalink }}">
-				<div class="nav-arrow">← Previous</div>
-				<span class="post-title">{{ page.higher.title }}</span>
-			</a>
-		{% endif %}
-		{% if page.lower %}
-			<a class="post-nav-item post-nav-next" href="{{ page.lower.permalink }}">
-				<div class="nav-arrow">Next →</div>
-				<span class="post-title">{{ page.lower.title }}</span>
-			</a>
-		{% endif %}
-	</nav>
+  <hr>
+  <nav id="post-nav">
+    {% if page.higher %}
+      <a class="post-nav-item post-nav-prev" href="{{ page.higher.permalink }}">
+        <div class="nav-arrow">← Previous</div>
+        <span class="post-title">{{ page.higher.title }}</span>
+      </a>
+    {% endif %}
+    {% if page.lower %}
+      <a class="post-nav-item post-nav-next" href="{{ page.lower.permalink }}">
+        <div class="nav-arrow">Next →</div>
+        <span class="post-title">{{ page.lower.title }}</span>
+      </a>
+    {% endif %}
+  </nav>
 {% endif %}
 
 <p class="dialog-buttons">
-	<a class="inline-button" href="#top">Go to top</a>
+<a class="inline-button" href="#top">Back to top</a>
 </p>
 {% endblock content %}

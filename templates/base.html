@@ -2,11 +2,11 @@
 <html lang="en">
 {% include "head.html" ignore missing -%}
 <body>
-	{% include "nav.html" ignore missing -%}
-	<div id="main" class="container">
-		{% block custom %}{%- endblock -%}
-		{% block content %}{%- endblock -%}
-	</div>
-	{% include "footer.html" ignore missing -%}
+  {% include "nav.html" ignore missing -%}
+  <div id="main" class="container">
+    {% block custom %}{%- endblock -%}
+    {% block content %}{%- endblock -%}
+  </div>
+  {% include "footer.html" ignore missing -%}
 </body>
 </html>
