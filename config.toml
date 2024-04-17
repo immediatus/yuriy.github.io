@@ -29,7 +29,7 @@ smart_punctuation = true
 
 date_format = "%d %B %Y"
 
-#google_analytics = "G-X0M5X84BLR"
+google_analytics = "G-X0M5X84BLR"
 
 [extra.nav]
 links = [
