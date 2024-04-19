@@ -18,7 +18,7 @@ Building definition of <mark>"Engineering Mindset"</mark> is mine long term proj
 
 &nbsp;&nbsp; Given the opportunity to compare my engineering education and its scientific extension in the same specialization about the difference between to be an engineer and to be a scientist in engineering specialization. The simplest differences that come to mind are role goals and objectives. And if for scientists goals are known enough: "to describe …", for engineers it is not so clear, since typically it is more about specific problem definition and generalization is not always a simple task. The best definition of engineering goal that I can find sounds like: "to change reality". And if to consider problem from a goal definition perspective: <mark>"to describe reality"</mark> for scientists vs <mark>"to change reality"</mark> for engineers, it is possible to see that exists  whole spectrum of roles which contains a lot of gradations between pure engineer and pure scientist - engineers who solving invention problems, and scientists who build applied theories. And a simplified view can be like a [pic. 1](#pic_1).
 
-<a name="pic_1">{{ image(url = "scientist_vs_engineer.svg", no_hover=true, full=false)}}</a>
+<a name="pic_1">{{ image(url = "blog/2024-03-12/scientist_vs_engineer.svg", no_hover=true, full=false)}}</a>
 <figcaption>pic.1 Scientist ↔️ Engineer spectrum.</figcaption>
 
 &nbsp;

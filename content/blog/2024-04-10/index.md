@@ -15,7 +15,7 @@ toc = false
 
 &nbsp;&nbsp; There are 2 well-defined processes known as: [scientific method<sup>[1]</sup>](https://en.wikipedia.org/wiki/Scientific_method) and [engineering design process<sup>[2]</sup>](https://en.wikipedia.org/wiki/Engineering_design_process) but both of them have a similar structure, and can be generalized to process in the [pic. 2](#pic_2).
 
-<a name="pic_2">{{ image(url="problem_solving_process.svg", no_hover=true, full=false)}}</a>
+<a name="pic_2">{{ image(url="blog/2024-04-10/problem_solving_process.svg", no_hover=true, full=false)}}</a>
 <figcaption>pic.2 Problem-solving generalized process.</figcaption>
 
 &nbsp;
